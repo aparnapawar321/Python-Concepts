@@ -1,7 +1,8 @@
 Name,Age,City
-Aparna,23,Pune
-Richa,23,Mumbai
-Mrunal,24,Nashik
-Amruta,25,Delhi
-Shital,26,Chennai
-Laxmi,26,Pune
+Aparna,23.0,Pune
+Richa,23.0,Mumbai
+Mrunal,24.0,Nashik
+Amruta,25.0,Delhi
+Shital,26.0,Chennai
+Laxmi,26.0,Pune
+Sameer,,Mumbai

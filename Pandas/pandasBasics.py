@@ -1,4 +1,4 @@
-from operator import index
+from json.decoder import NaN
 
 import pandas as pd
 
@@ -9,9 +9,9 @@ import pandas as pd
 # From dictionary
 
 data = {
-    "Name": ["Aparna", "Richa", "Mrunal", "Amruta", "Shital","Laxmi"],
-    "Age": [23,23,24,25,26,26],
-    "City": ["Pune","Mumbai","Nashik","Delhi","Chennai", "Pune"]
+    "Name": ["Aparna", "Richa", "Mrunal", "Amruta", "Shital","Laxmi","Sameer"],
+    "Age": [23,23,24,25,26,26,NaN],
+    "City": ["Pune","Mumbai","Nashik","Delhi","Chennai", "Pune", "Mumbai"]
 }
 
 df = pd.DataFrame(data)
@@ -134,7 +134,26 @@ print("Average age per city (GroupBy):")
 print(group_data, "\n")
 
 # -------------------------------
-# 12. Basic Statistics
+# 12. Missing data
+# -------------------------------
+print("Check values are NULL / missing")
+df1 = df.isnull()
+print(df1, "\n")
+
+print("Drop missing data row")
+df2 = df.dropna()
+print(df2, "\n")
+
+print("Replaces all missing values with Unknown (or any value you give)")
+df3= df.fillna("Unknown")
+print(df3, "\n")
+
+print("Replaces missing values in numeric columns with the average (mean) of that column.")
+df4 = df.fillna(df["Age"].mean())
+print(df4, "\n")
+
+# -------------------------------
+# 13. Basic Statistics
 # -------------------------------
 print("Statistics Summary:")
 print(df.describe())
