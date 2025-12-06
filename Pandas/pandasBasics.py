@@ -1,4 +1,4 @@
-from json.decoder import NaN
+from operator import index
 
 import pandas as pd
 
